@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Services</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      window.HINA_TRACKER_CONFIG = {
+        apiUrl: "http://localhost:8000",
+        siteId: "demo-site",
+        debug: true,
+      };
+    </script>
+    <script src="../dist/tracker.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>Northwind AI</strong>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1>AI Services</h1>
+      <p>Lead capture, visitor tracking, and a simple operations dashboard.</p>
+      <a class="cta" href="./contact.html" data-track="Talk to sales">Talk to sales</a>
+      <div class="tall"></div>
+    </main>
+  </body>
+</html>

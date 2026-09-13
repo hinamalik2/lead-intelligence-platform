@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      window.HINA_TRACKER_CONFIG = {
+        apiUrl: "http://localhost:8000",
+        siteId: "demo-site",
+        debug: true,
+      };
+    </script>
+    <script src="../dist/tracker.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>Northwind AI</strong>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Request a demo</h1>
+      <p>Submitting this form sends <code>form_start</code>, <code>form_submit</code>, and <code>POST /leads</code>.</p>
+      <form id="lead-form">
+        <label>
+          Name
+          <input name="name" required placeholder="Jane Doe" />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required placeholder="jane@company.com" />
+        </label>
+        <label>
+          Company
+          <input name="company" placeholder="ABC Ltd" />
+        </label>
+        <label>
+          Password (ignored by tracker)
+          <input name="password" type="password" placeholder="not collected" />
+        </label>
+        <button type="submit">Submit lead</button>
+      </form>
+      <p id="thanks" hidden>Thanks — lead sent with your visitor ID.</p>
+    </main>
+    <script>
+      document.getElementById("lead-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("thanks").hidden = false;
+      });
+    </script>
+  </body>
+</html>

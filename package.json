@@ -1,0 +1,10 @@
+{
+  "name": "lead-intelligence-platform",
+  "private": true,
+  "scripts": {
+    "sdk:build": "node tracker-sdk/scripts/build.js",
+    "sdk:test": "node tracker-sdk/tests/tracker.test.js",
+    "demo": "python3 -m http.server 5174 --directory tracker-sdk",
+    "dashboard": "npm run dev --prefix frontend/dashboard"
+  }
+}

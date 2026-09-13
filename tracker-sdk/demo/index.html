@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hina Demo — Home</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      window.HINA_TRACKER_CONFIG = {
+        apiUrl: "http://localhost:8000",
+        siteId: "demo-site",
+        debug: true,
+      };
+    </script>
+    <script src="../dist/tracker.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>Northwind AI</strong>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Website visitor tracking demo</h1>
+      <p>
+        This test site loads the Hina tracking SDK. Open DevTools → Network and
+        Console to watch events go to the local FastAPI backend.
+      </p>
+      <a class="cta" href="./services.html" data-track="Request Demo">Request Demo</a>
+      <p class="hint">Scroll this page to generate 25/50/75/100% scroll events.</p>
+      <div class="tall"></div>
+    </main>
+  </body>
+</html>
